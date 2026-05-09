@@ -1,0 +1,672 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+/* For Desktops */
+@media (max-width: 1024) {
+  .app-container {
+    flex-direction: column;
+  }
+  
+  .main-content {
+    margin: 20px;
+  }
+  
+  .vertical-navbar {
+    position: fixed;
+    right: 20px;
+    top: auto;
+    bottom: 20px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .vertical-navbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  
+  .profile-card {
+    position: fixed;
+    top: auto;
+    left: 20px;
+    bottom: 20px;
+    width: 200px;
+    height: auto;
+    padding: 15px;
+    border-radius: 12px;
+    border-right: none; /* remove right border */
+    border-bottom: #00ff88 solid 2px; /* add bottom border */
+  }
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    flex-direction: column;
+  }
+  
+  .main-content {
+    margin: 20px;
+  }
+  
+  .vertical-navbar {
+    position: fixed;
+    right: 20px;
+    top: auto;
+    bottom: 20px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .vertical-navbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  
+  .profile-card {
+    position: fixed;
+    top: auto;
+    left: 20px;
+    bottom: 20px;
+    width: 200px;
+    height: auto;
+    padding: 15px;
+    border-radius: 12px;
+    border-right: none; /* remove right border */
+    border-bottom: #00ff88 solid 2px; /* add bottom border */
+  }
+}
+
+/* Default: Desktop layout */
+.app-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Intro section */
+.intro {
+  text-align: center;
+  padding: 100px 20px;
+  background: #000;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 05px;
+  text-align: left;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #00ff88;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+/* Intro section */
+.about {
+  text-align: center;
+  padding: 100px 20px;
+  background: #000;
+}
+
+.about h1 {
+  font-size: 3rem;
+  margin-bottom: 05px;
+  text-align: left;
+  color: #00ff88;
+}
+
+.about p3 {
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #00ff88;
+  justify-content: left;
+}
+
+.about p {
+  font-size: 1.2rem;
+  justify-content: left;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  justify-content: left;
+  margin-bottom: 170px;
+}
+
+.about p.second {
+  font-size: 25px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+/* Reset everything to black */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #000;   /* full black */
+  color: rgb(255, 255, 255);              /* neon green text */
+  height: 100%;
+  font-size: 16px;
+}
+
+/* Ensure app container fills screen */
+.app-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: #000;   /* black background */
+}
+
+/* Middle Content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background: #000;
+  margin-left: 350px;
+  margin-right: 80px;
+}
+
+/* Right Vertical Navbar */
+.vertical-navbar {
+  position: fixed;
+  right: 0;
+  top: 5%;
+  width: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.vertical-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+}
+
+.vertical-navbar li {
+  margin: 20px 0;
+}
+
+.vertical-navbar a {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc; /* default gray */
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: #00ff88 3px solid;
+}
+
+.vertical-navbar a:hover {
+  color: #fff;
+  transform: scale(1.2); /* subtle zoom on hover */
+  text-shadow: 0 0 20px #01cf6f;
+}
+
+.vertical-navbar a.active {
+  background-color: #00ff88;   /* neon glow background */
+  color: #000;                 /* invert text/icon color */
+  box-shadow: 0 0 12px #00ff88;
+  border-radius: 8px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+/* Left Profile Card */
+.profile-card {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: 250px;
+  height: 100vh;
+  background: #111;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  text-align: center;
+  border-right: #00ff88 solid 2px;
+  z-index: 1000;
+}
+
+.profile-card p {
+  margin: 5px 0;
+}
+
+.profile-card h2 {
+  margin-bottom: 4px;
+}
+
+.profile-card h4 {
+  margin-top: 0px;
+  color: #00ff88;
+}
+
+.footer {
+  margin: 10px 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.profile-image {
+  width: 150px;       /* control width */
+  height: 150px;      /* control height */
+  object-fit: cover;  /* crop nicely if aspect ratio differs */
+  border-radius: 50%; /* make it circular */
+  border: 3px solid #00ff88; /* neon green border */
+  margin-bottom: 15px;
+  scale: inherit;
+}
+
+
+.social-icons{
+  margin-top: 20px;
+  size: 30px;
+}
+
+.social-icons a {
+  margin: 50px 5px;
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #fff;
+  transform: scale(1.2); /* subtle zoom on hover */
+  text-shadow: 0 0 10px #00ff88;
+}
+
+.hire-btn {
+  display: inline-block;
+  background-color: #00ff88;
+  color: #000;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 150px; /* pushes button to bottom */
+}
+
+.hire-btn:hover {
+  color: #fff;
+  transform: scale(1.2); /* subtle zoom on hover */
+  text-shadow: 0 0 10px #00ff88;
+}
+
+.section-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  box-shadow: 0 0 12px #00ff88;
+  text-align: left;
+  align-content: left;
+  /* New border */
+  border: 2px solid #00ff88;   /* neon green border */
+  width: fit-content;
+}
+.section-header i {
+  margin-right: 12px;
+  font-size: 22px;
+  color: #00ff88;
+}
+.section-header span {
+  letter-spacing: 1px;
+}
+
+.qualification-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 175px;
+}
+
+.qualification-item {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #00ff88;
+}
+
+.qualification-item h3 {
+  color: #00ff88;
+  margin-bottom: 10px;
+}
+
+.qualification-item p,
+.qualification-item li {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.skill-item {
+  background: #111;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #00ff88;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* makes it feel interactive */
+}
+
+.skill-item i {
+  font-size: 2rem;
+  color: #00ff88;
+  margin-bottom: 10px;
+}
+
+.skill-item p {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00ff88;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.service-item {
+  background: #111;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #00ff88;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item i {
+  font-size: 2rem;
+  color: #00ff88;
+  margin-bottom: 15px;
+}
+
+.service-item h3 {
+  color: #00ff88;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.service-item:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 0 20px #00ff88;
+}
+
+.section-header-services,
+.section-header-testimonials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  margin-top: 250px;
+  box-shadow: 0 0 12px #00ff88;
+  text-align: left;
+  align-content: left;
+  /* New border */
+  border: 2px solid #00ff88;   /* neon green border */
+  width: fit-content;
+}
+.section-header-services i {
+  margin-right: 12px;
+  font-size: 22px;
+  color: #00ff88;
+}
+.section-header-services span {
+  letter-spacing: 1px;
+}
+
+.testimonials {
+  max-width: 1100px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.3s ease;
+  border: #00ff88 2px solid;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #00ff88;
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #00ff88;
+}
+
+.testimonial-card .role {
+  display: block;
+  font-size: 0.9rem;
+  color: #00ff88;
+  margin-bottom: 15px;
+}
+
+.testimonial-card .quote {
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.project-card {
+  background: #111;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #00ff88;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+  color: #00ff88;
+  margin-bottom: 10px;
+}
+
+.project-card h4 {
+  color: #00ff88;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-decoration: underline 2px #00ff88;
+}
+
+.project-btn {
+  display: inline-block;
+  background-color: #00ff88;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.project-card p {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #00ff88;
+}
+
+.Project-Open {
+  color: #00ff88;
+}
+
+.section-header-projects{
+  margin-top: 300px;
+}
+
+.section-header-contact {
+  margin-top: 300px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #00ff88;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #00ff88;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  background: #000;
+  border: 1px solid #00ff88;
+  border-radius: 8px;
+  padding: 10px;
+  color: #ddd;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  box-shadow: 0 0 12px #00ff88;
+}
+
+.send-btn {
+  background: #00ff88;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.send-btn:hover {
+  box-shadow: 0 0 20px #00ff88;
+  transform: translateY(-3px);
+}
+
+.banner {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  animation: glow 1.5s infinite alternate;
+}
+
+.success {
+  background: #001a00;
+  color: #00ff88;
+  box-shadow: 0 0 12px #00ff88;
+}
+
+.error {
+  background: #1a0000;
+  color: #ff0044;
+  box-shadow: 0 0 12px #111
+}
+
